@@ -8,7 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.coincapapp.Api.ApiService.coinCapService
 import kotlinx.coroutines.launch
 
-class CoinCapViewModel () : ViewModel(){
+class CoinCapViewModel : ViewModel(){
 
     private val _coinCapState = mutableStateOf(CoinCapState())
     val coinCapState : State<CoinCapState> = _coinCapState
@@ -17,7 +17,7 @@ class CoinCapViewModel () : ViewModel(){
         fetchCoinCap()
     }
 
-    fun fetchCoinCap() {
+    private fun fetchCoinCap() {
         viewModelScope.launch {
             try {
                 val response = coinCapService.getCoinCap()
