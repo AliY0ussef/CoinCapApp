@@ -90,4 +90,13 @@ dependencies {
     implementation("androidx.compose.ui:ui:$compose_version")
     implementation("androidx.compose.material:material:$compose_version")
     implementation("androidx.compose.ui:ui-tooling-preview:$compose_version")
+
+    testImplementation("io.mockk:mockk:1.13.0")
+    testImplementation("io.mockk:mockk-android:1.13.0")
+    testImplementation("io.mockk:mockk-agent:1.13.0")
+    androidTestImplementation("io.mockk:mockk-android:1.13.0")
+    androidTestImplementation("io.mockk:mockk-agent:1.13.0")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
+    androidTestImplementation("androidx.navigation:navigation-testing:2.7.7")
+
 }
